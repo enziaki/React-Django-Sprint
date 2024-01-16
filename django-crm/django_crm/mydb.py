@@ -3,7 +3,7 @@ import mysql.connector
 db = mysql.connector.connect(
     host = 'localhost',
     user = 'root',
-    passwd = '956677Enzi!'
+    passwd = '#'
 
 )
 
@@ -12,5 +12,5 @@ db = mysql.connector.connect(
 cursorObj = db.cursor()
 
 #create db
-cursorObj.execute("CREATE DATABASE bruhMoment")
+cursorObj.execute("CREATE DATABASE #")
 print("Done!")

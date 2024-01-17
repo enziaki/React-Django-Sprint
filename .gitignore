@@ -3,3 +3,4 @@ package.json
 package-lock.json
 React/
 react-basics/node_modules/
+./TODO/todoRest/frontend/node_modules/

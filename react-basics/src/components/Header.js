@@ -1,7 +1,7 @@
-const Header = () => {
+const Header = ({title}) => {
   return (
     <div>
-        <h1>React Basics</h1>
+        <h1>{title}</h1>
     </div>
   )
 }

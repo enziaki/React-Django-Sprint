@@ -1,0 +1,23 @@
+.post-card {
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: #383838;
+    color: #FABD27;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.post-card.expanded {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+}
+
+.expanded-content {
+    padding: 20px;
+}

@@ -1,0 +1,11 @@
+.post-count-footer {
+    align-items: left;
+    font-size: 0.3 rem;
+}
+
+.content-container {
+    /* margin-left: 0.2rem; */
+    padding: 0.2rem;
+    font-weight: 700;
+    background-color: beige;
+}

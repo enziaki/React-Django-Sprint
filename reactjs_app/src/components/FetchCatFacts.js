@@ -1,5 +1,6 @@
 import { useQuery } from "react-query";
 import Axios from "axios";
+import './CSS/FetchCatFacts.css'
 
 function FetchCatFacts() {
     const {
@@ -20,10 +21,19 @@ function FetchCatFacts() {
     }
 
     return (
-        <h1>
-            <p>{catData?.fact}</p>
-            <button onClick={refetch}>Update Data</button>
-        </h1>
+        <div className="cat-fact-box">
+            {isError && <p className="error-message">Caught an error</p>}
+            {isLoading && <p className="loading-message">Loading...</p>}
+
+            {!isError && !isLoading && (
+                <div className="fact-content">
+                    <p>{catData?.fact}</p>
+                    <button className="update-button" onClick={refetch}>
+                        More...
+                    </button>
+                </div>
+            )}
+        </div>
     );
 };
 

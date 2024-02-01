@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import FetchCatFacts from "./FetchCatFacts";
+import './CSS/Footer.css';
 
 
 // Footer will hold the number of posts fetched from the api endpoint
@@ -27,11 +29,20 @@ function Footer() {
 
     return (
         <footer className="post-count-footer">
-            {isLoading && <p className="loading-message">Loading post count...</p>}
-            {error && <p className="error-message">Error fetching post count: {error.message}</p>}
-            {!isLoading && !error && <p className="post-count">Fetched {postCount} posts</p>}
+            <div className="content-container">
+                {/* Post count information */}
+                {isLoading && <p className="loading-message">Loading post count...</p>}
+                {error && <p className="error-message">Error fetching post count: {error.message}</p>}
+                {!isLoading && !error && <p className="post-count">Fetched {postCount} posts</p>}
+
+                {/* FetchCatFacts box */}
+                <div className="cat-fact-container">
+                    <FetchCatFacts />
+                </div>
+            </div>
         </footer>
-    )
+    );
+
 }
 
 export default Footer;

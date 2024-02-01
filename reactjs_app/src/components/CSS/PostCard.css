@@ -1,11 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .post-card {
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    background-color: #383838;
-    color: #FABD27;
-    margin: 10px;
+    border-radius: 1rem;
+    /* box-shadow: 0 0.1rem 0.1rem rgba(236, 239, 244, 1); */
+    padding: 1rem;
+    background-color: #e9e9e9;
+    color: #384252;
+    margin: 0.8rem;
     cursor: pointer;
+    width: 75%;
+    /* align-items: center; */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-family: 'Lato', sans-serif;
+}
+
+.post-card:hover {
+
+    box-shadow: 0 10px 10px rgba(236, 239, 244, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .post-card.expanded {
@@ -19,5 +33,5 @@
 }
 
 .expanded-content {
-    padding: 20px;
+    padding: 2rem;
 }

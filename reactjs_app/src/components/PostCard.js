@@ -9,8 +9,9 @@ function PostCard({ post }) {
             <h3>{post.id}: {post.title}</h3>
             {isExpanded && (
                 <div className="expanded-content">
-                    <p>Body: {post.body}</p>
-                    <p>User Id: {post.userId}</p>
+                    <p1>{post.body}</p1>
+                    <br /><br />
+                    <p2>User Id: {post.userId}</p2>
                 </div>
             )}
         </div>

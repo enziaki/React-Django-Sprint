@@ -27,7 +27,7 @@ function FetchCatFacts() {
 
             {!isError && !isLoading && (
                 <div className="fact-content">
-                    <p>{catData?.fact}</p>
+                    <p>Cat Fact: {catData?.fact}</p>
                     <button className="update-button" onClick={refetch}>
                         More...
                     </button>

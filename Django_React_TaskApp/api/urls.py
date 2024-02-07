@@ -3,4 +3,9 @@ from . import views
 
 urlpatterns = [
     path('', views.api_overview, name="api-overview"),
+    path('todolist/', views.todo_list, name="todo-list"),
+    path('tododetail/<str:pk>', views.todo_detail, name="todo-detail"),
+    path('todocreate', views.todo_create, name="todo-create"),
+    path('todoupdate/<str:pk>', views.todo_update, name="todo-update"),
+    path('tododelete/<str:pk>', views.todo_delete, name="todo-delete"),
 ]

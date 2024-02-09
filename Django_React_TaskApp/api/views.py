@@ -47,7 +47,7 @@ def todo_detail(request, pk):
     
 
 # Updating the entity using UPDATE and id
-@api_view(["POST"])
+@api_view(["POST", "PUT", "PATCH"])
 def todo_update(request, pk):
     todo = get_object_or_404(Todo, id=pk)
     serializer= TodoSerializer(instance=todo, data=request.data)

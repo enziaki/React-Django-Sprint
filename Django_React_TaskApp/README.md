@@ -33,8 +33,19 @@ Craft a full-stack web application with Django (backend) and React (frontend) to
 * Understand data flow between frontend and backend.
 * Master asynchronous operations (API calls, state updates).
 
-## Functionalities
+**Run App**
 
-+
-+
-+
++ Make migrations and migrate as it uses sq.lite for it's db
+```bash
+python3 manage.py makemigrations && python3 manage.py migrate
+```
+
++ Run the backend first
+```bash
+python3 manage.py runserver
+```
++ Now cd into frontend and run the frontend
+```bash
+cd frontend
+npm start
+```

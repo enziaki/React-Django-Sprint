@@ -19,9 +19,7 @@
 * Emphasis on implementing modern React practices like functional components and hooks is encouraged.
 * A clear understanding of component lifecycles, state management techniques, and handling asynchronous operations is expected.
 
-## Functionalities
-
-+
-+
-+
-
+**Run App**
+```bash
+npm start
+```

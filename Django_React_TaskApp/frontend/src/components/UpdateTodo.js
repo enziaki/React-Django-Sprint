@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './CSS/UpdateTodo.css'
 
 function UpdateTodo({ todo }) {
     const [task, setNewTask] = useState(todo.task);

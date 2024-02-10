@@ -1,0 +1,60 @@
+.UpdateForm {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.25rem;
+    border: 0.0625rem solid #A3Be8c;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    background-color: #4c566a;
+}
+
+/* Input fields */
+.UpdateForm input[type="text"],
+.UpdateForm textarea {
+    /* display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.25rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    background-color: #3b4252;
+    color: #EBCB8B;
+    padding-bottom: 0.5rem; */
+    padding: 0.625rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 0.625rem;
+    width: 80%;
+    font-size: 1rem;
+    background-color: #434c5e;
+    color: #EBCB8B;
+    border: 0.0625rem solid #2e3440;
+}
+
+.UpdateForm input[type="text"]:focus,
+.UpdateForm textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+.UpdateForm input[type="text"]::placeholder,
+.UpdateForm textarea::placeholder {
+    color: #999;
+}
+
+.UpdateForm button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.UpdateForm button[type="submit"]:hover {
+    background-color: #48a941;
+}

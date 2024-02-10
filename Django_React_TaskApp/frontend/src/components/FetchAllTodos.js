@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Todo from './Todo';
 import { useQuery } from 'react-query';
-import UpdateTodo from './UpdateTodo';
 
 const FetchAllTodos = () => {
     const [todos, setTodos] = useState([]);
@@ -16,11 +15,11 @@ const FetchAllTodos = () => {
     });
 
     if (isError) {
-        return <h1> Caught an error IN JSON</h1>
+        return <h1> Caught an error in Backend</h1>
     }
 
     if (isLoading) {
-        return <h1>Loading.... JSON</h1>
+        return <h1>Loading.... BACKEND</h1>
     }
 
     return (

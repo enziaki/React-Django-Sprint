@@ -2,6 +2,8 @@ import React from 'react'
 import FetchAllTodos from './components/FetchAllTodos'
 import AddTodo from './components/AddTodo';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import './App.css'
+import Heading from './components/Heading';
 
 function App() {
 
@@ -10,8 +12,9 @@ function App() {
   return (
     <div>
       <QueryClientProvider client={queryClient}>
-        <FetchAllTodos />
+        <Heading />
         <AddTodo />
+        <FetchAllTodos />
       </QueryClientProvider>
     </div>
   )

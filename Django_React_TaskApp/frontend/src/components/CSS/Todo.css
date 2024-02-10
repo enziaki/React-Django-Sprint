@@ -1,0 +1,74 @@
+.todo {
+    background-color: #3b4252;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.05);
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+
+}
+
+.todo h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    max-width: 12.5rem;
+    /* Adjust as needed */
+    word-wrap: break-word;
+    /* Or overflow-wrap: break-word */
+    margin-bottom: 0.3125rem;
+    color: #EBCB8B;
+    margin-left: 0.5rem;
+}
+
+.todo .expanded-content {
+    margin-left: 2rem;
+    display: block;
+    max-width: 80%;
+    word-wrap: break-word;
+    color: #D8DEE9;
+}
+
+.todo input[type="checkbox"] {
+    margin-right: 0.625px;
+    margin-left: 0.625px;
+}
+
+.todo button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.todo button:hover {
+    background-color: #1d8b15;
+}
+
+
+.todo .expanded-content button {
+    margin: 10px;
+    justify-content: center;
+}
+
+.todo p1 {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.todo-content {
+    display: flex;
+    align-items: center;
+    margin: 0.7rem;
+}
+
+#delButton {
+    background-color: rgb(255, 89, 89);
+}
+
+#delButton:hover {
+    background-color: rgb(252, 40, 40);
+}

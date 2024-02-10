@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './CSS/AddTodo.css'
 
 function AddTodo() {
     const [newTask, setNewTask] = useState('');
@@ -19,14 +20,18 @@ function AddTodo() {
             .catch(error => {
                 console.error('Error creating a post:', error);
             });
+        setNewDescription('');
+        setNewTask('');
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)} placeholder="Title" />
-            <textarea value={newDescription} onChange={(e) => setNewDescription(e.target.value)} placeholder="Description"></textarea>
-            <button type="submit">Create Todo</button>
-        </form>
+        < div className='add-todo-form'>
+            <form onSubmit={handleSubmit}>
+                <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)} placeholder="Title" />
+                <textarea value={newDescription} onChange={(e) => setNewDescription(e.target.value)} placeholder="Description"></textarea>
+                <button type="submit">Create Todo</button>
+            </form>
+        </div>
     );
 }
 

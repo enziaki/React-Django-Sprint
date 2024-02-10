@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import UpdateTodo from './UpdateTodo';
+import './CSS/Todo.css'
 
 function Todo({ todo }) {
 
     const [isComplete, setIsComplete] = useState(todo.completed);
     const [isExpanded, setIsExpanded] = useState(false);
+    const [isUpdateVisible, setIsUpdateVisible] = useState(false);
+
     const updatedData = {
         "id": todo.id,
         "task": todo.task,
@@ -30,23 +33,37 @@ function Todo({ todo }) {
             }).catch(error => { console.log("Error while deleting: " + error) })
     }
 
+    const handleUpdateVisibility = () => {
+        setIsUpdateVisible(!isUpdateVisible);
+    }
+
     return (
-        <div className="todo">
-            <h2 style={{ textDecoration: isComplete ? 'line-through' : 'none' }} onClick={() => setIsExpanded(!isExpanded)}>{todo.task}</h2>
-            <input
-                type="checkbox"
-                checked={isComplete} // Use local state
-                onChange={() => {
-                    setIsComplete(!isComplete); // Update local state
-                    handleCompletion(); // Call API
-                }}
-            />
+
+        <div className="todo" >
+            <div className="todo-content" >
+                <input
+                    type="checkbox"
+                    checked={isComplete}
+                    onChange={() => {
+                        setIsComplete(!isComplete);
+                        handleCompletion();
+                    }}
+                />
+                <h2
+                    style={{ textDecoration: isComplete ? 'line-through' : 'none' }}
+                    onClick={() => setIsExpanded(!isExpanded)}
+                >
+                    {todo.task}
+                </h2>
+            </div>
             {isExpanded && (
                 <div className="expanded-content">
                     <p1>{todo.description}</p1>
                     <br />
-                    <UpdateTodo todo={todo} />
-                    <button onClick={handleDeletion}>Delete Todo</button>
+                    {/* <UpdateTodo todo={todo} /> */}
+                    <button id="delButton" onClick={handleDeletion}>Delete Todo</button>
+                    <button onClick={handleUpdateVisibility}>Update todo</button>
+                    {isUpdateVisible && <UpdateTodo todo={todo} />}
                 </div>
             )}
         </div>
